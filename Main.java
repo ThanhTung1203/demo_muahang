@@ -15,7 +15,7 @@ public class Main {
             System.out.println("4. Mua hàng");
             System.out.println("5. Xem danh sách đơn hàng");
             System.out.println("0. Thoát");
-            System.out.print("Chọn một tính năng (0-5): ");
+            System.out.print("Chọn một tính năng : ");
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -23,7 +23,7 @@ public class Main {
                     store.displayProductList();
                     break;
                 case 2:
-                    // Thêm tính năng tìm kiếm theo tên
+                // Chưa có chức năng này đâu :)))
                     break;
                 case 3:
 

@@ -37,9 +37,16 @@ class Store {
     ArrayList<Invoice> invoices = new ArrayList<>();
 
     public Store() {
-        products.add(new Product(1, "Product1", 10.0, 50));
-        products.add(new Product(2, "Product2", 15.0, 30));
-        // Thêm các sản phẩm khác vào đây
+        products.add(new Product(1, "Rau1", 10.0, 50));
+        products.add(new Product(2, "Rau2", 15.0, 45));
+        products.add(new Product(3, "Rau3", 20.0, 40));
+        products.add(new Product(4, "Rau4", 25.0, 35));
+        products.add(new Product(5, "Rau5", 30.0, 30));
+        products.add(new Product(6, "Rau6", 35, 25));
+        products.add(new Product(7, "Rau7", 40, 20));
+        products.add(new Product(8, "Rau8", 45, 15));
+        products.add(new Product(9, "Rau9", 50, 10));
+        products.add(new Product(0, "Rau10", 55, 5));
     }
 
     public void displayProductList() {
@@ -77,7 +84,7 @@ class Store {
             invoices.add(invoice);
             System.out.println("Đã mua hàng: " + quantity +
                     " " + product.name +
-                    "(s) cho " + customerName);
+                    " đã mua bởi " + customerName);
         } else if (product != null && product.quantity < quantity) {
             System.out.println("Sản phẩm '" + product.name +
                     "' chỉ còn " + product.quantity +
@@ -90,9 +97,9 @@ class Store {
     public void displayInvoices() {
         for (Invoice invoice : invoices) {
             System.out.println("Time: " + invoice.timestamp +
-                    " - Customer: " + invoice.customer_name +
-                    " - Demo.Product: " + invoice.product +
-                    " - Quantity: " + invoice.quantity);
+                    "\nCustomer: " + invoice.customer_name +
+                    "\nDemo.Product: " + invoice.product +
+                    "\nQuantity: " + invoice.quantity);
         }
     }
 }
